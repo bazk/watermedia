@@ -340,7 +340,7 @@ public class VideoLANPlayer extends VideoPlayer {
         @Override
         public void stopped(MediaPlayer mediaPlayer) {
             checkIfCurrentThreadHaveClassLoader();
-            EV.callMediaStoppedEvent(VideoLANPlayer.this, new MediaStoppedEvent.EventData(player.mediaPlayer().status().length()));
+            EV.callMediaStoppedEvent(VideoLANPlayer.this, new MediaStoppedEvent.EventData(-1));
         }
 
         @Override
